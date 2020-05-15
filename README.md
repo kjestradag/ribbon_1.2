@@ -29,18 +29,18 @@ Depending on which shell you have, please add these environmental variables:
 
 In bash shell, could be .bashrc or .bash_profile add:
 
-export MEMEribbon=/path/where/you/installed/ribbon_1.2/db
+    export MEMEribbon=/path/where/you/installed/ribbon_1.2/db
 
-PATH=$PATH:/path/where/you/installed/ribbon_1.2/bin
+    PATH=$PATH:/path/where/you/installed/ribbon_1.2/bin
 
 
 Please, make sure that everything is installed and running properly.
 Once you defined the environmental variables you can run the script "ribbon" to chech if everything it's okay. You can also run the example in the "example" folder, like this:
 
 
-$ cd example
+    $ cd example
 
-$ ribbon ecoli.fna ecoli
+    $ ribbon ecoli.fna ecoli
 
 
 if everything worked well, the md5sum firm of generated file "ecoli.rib_complete_tail.fna" must be equal to the md5sum firm in the "md5sum_ecoli.rib_complete_tail.txt" file.
