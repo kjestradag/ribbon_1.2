@@ -48,4 +48,5 @@ if everything worked well, the md5sum firm of generated file "ecoli.rib_complete
 
 Any questions:
 
-Karel Estrada karel[at]ibt.unam.mx / kjestradag@gmail.com
+Karel Estrada
+karel[at]ibt.unam.mx / kjestradag@gmail.com
