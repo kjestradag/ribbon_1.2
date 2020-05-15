@@ -1,5 +1,9 @@
 
-# Ribbon (Ribosomal Bring On) 1.2 by Karel Estrada && Enrique Merino <kjestradag@gmail.com>
+# Ribbon (Ribosomal Bring On)
+
+version 1.2
+
+Karel Estrada && Enrique Merino
 
 # INTRODUCTION
 Ribbons extracts all copies of mRNA ribosomal 16s from bacteria or archaea genomes, using conserved motifs in the 16S mRNA ribosomal to detect them in the genomes and evaluate the true regions that contain a copy of this.
@@ -40,3 +44,8 @@ $ ribbon ecoli.fna ecoli
 
 
 if everything worked well, the md5sum firm of generated file "ecoli.rib_complete_tail.fna" must be equal to the md5sum firm in the "md5sum_ecoli.rib_complete_tail.txt" file.
+
+
+Any questions:
+
+Karel Estrada karel[at]ibt.unam.mx / kjestradag@gmail.com
