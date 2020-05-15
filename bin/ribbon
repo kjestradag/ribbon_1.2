@@ -1,0 +1,75 @@
+#!/usr/bin/env perl
+use strict;
+use Getopt::Std;
+
+my(%opts);
+getopts("ha", \%opts);
+$opts{h} && help();
+$opts{a} ||= 'bac';
+if( -t STDIN and not @ARGV) {help()};
+
+my $genome= shift;
+my $org= shift;
+my $superkingdom= $opts{a};
+
+print STDERR "split genome..\n";
+splitgenome(4000,$genome);
+
+print STDERR "MAST..\n";
+$superkingdom eq 'bac' ? (system("mast \$MEMEribbon/meme_bact.txt ${genome}_windows.fna -oc mast -ev 1e-100 -mt 1e-08 -best -hit_list > ${genome}_windows.mast")) : (system("mast \$MEMEribbon/meme_arch.txt ${genome}_windows.fna -oc mast -ev 1e-100 -mt 1e-08 -best -hit_list > ${genome}_windows.mast"));
+
+print STDERR "extracting 16s..\n";
+$superkingdom eq 'bac' ? (system("ext_16s_from_mast.pl ${genome}_windows.mast $org $genome")) : (system("ext_16s_from_mast_archaeas.pl ${genome}_windows.mast $org $genome"));
+
+# cleanning tmp files
+unlink "${genome}_windows.mast","${org}_windows.mast.resume","${genome}_windows.fna","$org.str.txt";
+unlink "${org}.rib_nocomplete_tail.fna" if (-z "${org}.rib_nocomplete_tail.fna");
+
+if (-z "${org}.rib_nocomplete_tail.fna" && -z "${org}.rib_complete_tail.fna"){
+	print STDERR "not 16S found";
+}else{
+	my $fastalines= `wc -l ${org}.rib_complete_tail.fna`;
+	print STDERR "",$fastalines/2," complete copies of 16S ribosomal were found\n";
+}
+
+chdir '..';
+
+sub splitgenome{
+	my ($name, %seq);
+	my ($wind, $file_to_open)= @_; # recibe el tamao de ventana (el step size sera de este valor entre 2) que quiero y el genoma. Imprime un fasta con tantas secuencias del tamanio de ventana y separadas por el stepsize quepan en el genoma.
+
+	open IN, $file_to_open or die "Cant read $file_to_open\n";
+	while(<IN>){
+	    chomp;
+	    if( /^>(\S+)/ ){
+	        $name= $1;
+	        next
+	    }
+	    $seq{$name}.=$_;
+	}
+	open OUT, ">${genome}_windows.fna";
+	foreach my $name ( sort keys %seq ){
+	    my ($i, $from, $total)= (0) x 3;
+		while( $total < length($seq{$name}) ){
+	        $total+=$wind/2;
+	        $i++;
+		    my $subs= substr($seq{$name}, $from, $wind);
+	        $from= $from+$wind/2;
+	        print OUT ">$name.$i\n$subs\n";
+	    }
+	}
+}
+
+sub help{
+die <<'ayuda';
+  Ribbon (Ribosomal Bring On) 1.2 by Karel Estrada && Enrique Merino <kjestradag@gmail.com>
+Synopsis:
+  extracts all copies of mRNA ribosomal 16s from bacteria or archaea genomes
+Usage:
+  ribbon [opts] <genome.fna> <specie.name>
+General:
+  -h             This help
+  -a             prediction for archaeas superkingdom. Default is bacteria.
+
+ayuda
+}
