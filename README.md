@@ -1,9 +1,8 @@
 
 # Ribbon (Ribosomal Bona-fide)
 
-version 1.2
-
-Karel Estrada && Enrique Merino
+    Karel Estrada && Enrique Merino
+    Instituto de Biotecnología, Universidad Nacional Autónoma de México
 
 # INTRODUCTION
 Ribbons extracts all copies of mRNA ribosomal 16s from bacteria or archaea genomes, using conserved motifs in the 16S mRNA ribosomal to detect them in the genomes and evaluate the true regions that contain a copy of this.
