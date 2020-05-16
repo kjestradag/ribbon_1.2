@@ -1,5 +1,5 @@
 
-# Ribbon (Ribosomal Bring On)
+# Ribbon (Ribosomal Bona-fide)
 
 version 1.2
 
