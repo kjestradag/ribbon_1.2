@@ -13,7 +13,7 @@ extract_16S();
 print_structure();
 
 sub ext_data_from_mast{
-    open RESUME, ">genome_windows.mast.resume";
+    open RESUME, ">${org}_windows.mast.resume";
     print RESUME "$org\n";
     ($seq, $names)= read_fasta("$genome", '^>(\S+)');
     open IN, $mast or die "Cant read $mast\n";

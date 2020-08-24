@@ -62,7 +62,7 @@ sub splitgenome{
 
 sub help{
 die <<'ayuda';
-  Ribbon (Ribosomal Bring On) 1.2 by Karel Estrada && Enrique Merino <kjestradag@gmail.com>
+  Ribbon (Ribosomal Bona-fide) 1.2 by Karel Estrada && Enrique Merino <kjestradag@gmail.com>
 Synopsis:
   extracts all copies of mRNA ribosomal 16s from bacteria or archaea genomes
 Usage:
