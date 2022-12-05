@@ -1,10 +1,28 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
 cff-version: 1.2.0
-message: "If you use this software, please cite it as below."
+title: Ribbon (Ribosomal Bona-fide)
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
 authors:
-  - family-names: Druskat
-    given-names: Stephan
-    orcid: https://orcid.org/0000-0003-4925-7248
-title: "My Research Software"
-version: 2.0.4
-doi: 10.5281/zenodo.1234
-date-released: 2021-08-11
+  - given-names: Karel
+    family-names: Estrada
+    email: karel.estrada@ibt.unam.mx
+    affiliation: >-
+      Instituto de Biotecnología, Universidad
+      Nacional Autónoma de México
+    orcid: 'https://orcid.org/0000-0002-7671-6959'
+  - given-names: Enrique
+    family-names: Merino
+    email: enrique.merino@ibt.unam.mx
+    affiliation: >-
+      Instituto de Biotecnología, Universidad
+      Nacional Autónoma de México
+identifiers:
+  - type: url
+    value: 'https://github.com/kjestradag/ribbon_1.2'
+version: '1.2'
+date-released: '2019-01-08'
