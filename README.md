@@ -1,11 +1,10 @@
+[![DOI](https://zenodo.org/badge/264321275.svg)](https://zenodo.org/badge/latestdoi/264321275)
 
 # Ribbon (Ribosomal Bona-fide)
 
     Karel Estrada && Enrique Merino
     Instituto de Biotecnología, Universidad Nacional Autónoma de México
    
- [![DOI](https://zenodo.org/badge/264321275.svg)](https://zenodo.org/badge/latestdoi/264321275)
-
 # Introduction
 Ribbons extracts all copies of mRNA ribosomal 16s from bacteria or archaea genomes, using conserved motifs in the 16S mRNA ribosomal to detect them in the genomes and evaluate the true regions that contain a copy of this.
 
