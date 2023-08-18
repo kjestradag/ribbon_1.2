@@ -47,7 +47,7 @@ Once you defined the environmental variables you can run the script "ribbon" to 
 if everything worked well, the md5sum firm of generated file "ecoli.rib_complete_tail.fna" must be equal to the md5sum firm in the "md5sum_ecoli.rib_complete_tail.txt" file.
 
 ## Citation
-Estrada K, Merino E. Ribbon (Ribosomal Bona-fide). 2020. [doi:10.5281/zenodo.7796827](https://doi.org/10.5281/zenodo.7796827)
+Estrada, K. (2019). Ribbon (Ribosomal Bona-fide) (Version 1.2) [Computer software]. https://doi.org/10.5281/zenodo.7796827
 
 # Any questions:
 Karel Estrada
