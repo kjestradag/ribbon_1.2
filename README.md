@@ -8,7 +8,7 @@
 # Introduction
 Ribbons extracts all copies of mRNA ribosomal 16s from bacteria or archaea genomes, using conserved motifs in the 16S mRNA ribosomal to detect them in the genomes and evaluate the true regions that contain a copy of this.
 
-The main purpose of Ribbon is to extract complete copies of the 16s, including its 3'prime, where we will find the signature of the anti-Shine-Dalgarno sequence.
+The main purpose of Ribbons is to extract complete copies of the 16S, including its 3' prime, where the signature of the anti-Shine-Dalgarno sequence is found.
 
 # Requirements:
 
@@ -51,4 +51,4 @@ Estrada, K. (2019). Ribbon (Ribosomal Bona-fide) (Version 1.2) [Computer softwar
 
 # Any questions:
 Karel Estrada
-karel@ibt.unam.mx / kjestradag@gmail.com
+karel.estrada@ibt.unam.mx
